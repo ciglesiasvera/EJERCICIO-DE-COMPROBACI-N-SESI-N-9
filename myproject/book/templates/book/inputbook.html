@@ -1,0 +1,9 @@
+{% extends 'book/base.html' %}
+{% block content %}
+<h2>Ingresar nuevo libro</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar libro</button>
+</form>
+{% endblock %}
